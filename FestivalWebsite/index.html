@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Festival</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Music Festival 2024</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="artists.html">Artists</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+    <main>
+        <div id="pixi-container"></div>
+        <div class="slider-container">
+            <input type="range" id="slider" min="0" max="100" value="50">
+        </div>
+        <div class="video-container">
+            <video controls width="100%">
+                <source src="video/movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="audio-container">
+            <img src="images/music.png" alt="Music Icon" class="audio-icon" id="audio-icon">
+            <audio id="audio" loop>
+                <source src="video/music.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        <div class="text-container">
+            <p>Welcome to the Music Festival 2024! Enjoy great music, amazing performances, and a fantastic atmosphere.</p>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <a href="#">Volunteer</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+        <div>
+            <p>Email: info@festival.com</p>
+            <p>Festival</p>
+            <p>© Vullnet Lipovica</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
