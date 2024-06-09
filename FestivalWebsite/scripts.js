@@ -54,8 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
         zoneGraphics.buttonMode = true;
         zoneGraphics.on('pointerover', () => {
             showInfoBox(zone.info, zone.price);
+            zoneGraphics.tint = 0xaaaaaa; // Change zone color on mouseover
         });
-        zoneGraphics.on('pointerout', hideInfoBox);
+        zoneGraphics.on('pointerout', () => {
+            hideInfoBox();
+            zoneGraphics.tint = 0xffffff; // Restore zone color on mouseout
+        });
         app.stage.addChild(zoneGraphics);
 
         // Create text label for the zone
