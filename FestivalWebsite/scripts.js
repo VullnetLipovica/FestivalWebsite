@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create interactive zones
     const zones = [
         { name: 'Main Stage', x: 860, y: 10, width: 300, height: 110, color: 0xff0000, price: '$200', info: 'Main Stage - Best View!' },
-        { name: 'VIP', x: 650, y: 130, width: 200, height: 110, color: 0x00ff00, price: '$150', info: 'VIP Area - Exclusive Access!' },
-        { name: 'Ultra', x: 1172, y: 10, width: 200, height: 110, color: 0x0000ff, price: '$100', info: 'Ultra Area - Premium Experience!' },
+        { name: 'VIP', x: 650, y: 130, width: 200, height: 110, color: 0x00ff00, price: '$100', info: 'VIP Area - Exclusive Access!' },
+        { name: 'Ultra', x: 1172, y: 10, width: 200, height: 110, color: 0x0000ff, price: '$150', info: 'Ultra Area - Premium Experience!' },
         { name: 'Normal', x: 860, y: 130, width: 300, height: 200, color: 0x000000, price: '$50', info: 'Normal Area - General Admission!' }
     ];
 
