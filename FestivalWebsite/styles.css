@@ -27,6 +27,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .right {
@@ -186,6 +188,37 @@ label, select {
 @media (max-width: 768px) {
     .gallery img {
         width: calc(50% - 10px); /* 2 images per row on smaller screens */
+    }
+    .right {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .audio-icon img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .banner {
+        padding: 5px 0;
+    }
+
+    .marquee span {
+        padding: 0 20px;
+    }
+    .artist {
+        width: 100%;
+        max-width: 300px;
     }
 }
 
