@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
 
-    // Hide the preloader after a delay
     setTimeout(() => {
         preloader.style.display = 'none';
-    }, 1000); // Adjust this value for longer or shorter preloader display
+    }, 1000);
 
     const audioIcon = document.getElementById('audio-icon');
     const audio = document.getElementById('audio');
@@ -14,27 +13,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         audioIcon.addEventListener('mouseenter', () => {
             audio.play();
-            audioIcon.src = 'images/music2.gif'; // Change to the new icon
+            audioIcon.src = 'images/music2.gif'; 
         });
 
         audioIcon.addEventListener('mouseleave', () => {
             audio.pause();
             audio.currentTime = 0;
-            audioIcon.src = 'images/music2.png'; // Revert to the original icon
+            audioIcon.src = 'images/music2.png'; 
         });
     }
 
-    // Create a Pixi Application
     const app = new PIXI.Application({
         width: window.innerWidth,
         height: 400,
         backgroundColor: 0x1a1a1a
     });
 
-    // Append the Pixi canvas to the container
     document.getElementById('pixi-container').appendChild(app.view);
 
-    // Create interactive zones
+   
     const zones = [
         { name: 'Main Stage', x: 860, y: 10, width: 300, height: 110, color: 0xff0000, price: '$200', info: 'Main Stage - Best View!' },
         { name: 'VIP', x: 650, y: 130, width: 200, height: 110, color: 0x00ff00, price: '$100', info: 'VIP Area - Exclusive Access!' },
@@ -54,15 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
         zoneGraphics.buttonMode = true;
         zoneGraphics.on('pointerover', () => {
             showInfoBox(zone.info, zone.price);
-            zoneGraphics.tint = 0xaaaaaa; // Change zone color on mouseover
+            zoneGraphics.tint = 0xaaaaaa;
         });
         zoneGraphics.on('pointerout', () => {
             hideInfoBox();
-            zoneGraphics.tint = 0xffffff; // Restore zone color on mouseout
+            zoneGraphics.tint = 0xffffff;
         });
         app.stage.addChild(zoneGraphics);
 
-        // Create text label for the zone
         const zoneText = new PIXI.Text(zone.name, {
             fontFamily: 'Kanit',
             fontSize: 24,
@@ -85,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
         infoBox.style.display = 'none';
     }
 
-    // Handle ticket purchase buttons
     document.getElementById('normal-ticket').addEventListener('click', () => {
         alert('Normal Ticket Purchased!');
     });

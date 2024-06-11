@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'video', src: 'video/movie.mp4' },
         { type: 'video', src: 'video/movie2.mp4' },
         { type: 'video', src: 'video/movie3.mp4' },
-        { type: 'image', src: 'images/festival4.jpg' }
+        { type: 'image', src: 'images/festival4.webp' }
     ];
 
     let currentIndex = 0;
 
     const app = new PIXI.Application({
-        width: 1000,  // Fixed width
-        height: 400, // Fixed height
+        width: 1000,
+        height: 400, 
         backgroundColor: 0x1a1a1a
     });
 
